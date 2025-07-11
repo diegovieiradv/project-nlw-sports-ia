@@ -11,6 +11,7 @@ body {
   background-repeat: no-repeat;
   background-color: #121214;
   color: #fff;
+  min-height: 100vh;
 }
 
 body *,
@@ -146,7 +147,108 @@ button:disabled {
   color: #000;
 }
 
+.response-content {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.25rem;
+  border-left: 4px solid #43e7ad;
+}
+
+.response-content ul {
+  padding-left: 1.5rem;
+  opacity: 0.7;
+}
+.response-content p {
+  color: #fff;
+}
 .loading {
   animation: pulse 1.5s ease-in-out infinite;
   opacity: 0.8;
+}
+.hidden {
+  display: none;
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+  body {
+    background-size: cover;
+    background-position: center;
+    padding: 0 10px;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  header img {
+    width: 100%;
+    max-width: 16rem;
+  }
+
+  main {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0 5px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  section div {
+    padding: 1rem;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  .response-content {
+    font-size: 14px;
+    word-wrap: break-word;
+    margin-top: 1rem;
+  }
+}
+
+/* Mobile Landscape (orientação paisagem) */
+@media (max-width: 767px) and (orientation: landscape) {
+  body {
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header img {
+    max-width: 12rem;
+  }
+
+  main {
+    margin: 0.5rem auto;
+  }
+
+  form {
+    gap: 0.5rem;
+  }
+
+  input,
+  select,
+  button {
+    padding: 0.5rem;
+  }
+
+  section div {
+    padding: 0.75rem;
+  }
 }

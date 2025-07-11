@@ -16,14 +16,39 @@ const perguntarAI = async (question, game, apiKey) => {
   const model = "gemini-2.5-flash";
   const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
-  const pergunta = `Você é um especialista no jogo ${game}. Por favor, responda a seguinte pergunta sobre o jogo: ${question}`;
+  const prompt = `
+  ## Especialidade
+  Você é um especialista assistente de meta para o jogo ${game}
+  
+  ## Tarefa
+  Você deve responder as perguntas do usuário com base no seu conhecimento do jogo, estratégias, builds e dicas
 
-  const contents = {
+  ## Regras
+  - Se você não souber a resposta,  responda com 'Não sei' e não tente inventar uma resposta.
+  - Se a pergunta não for sobre o jogo, responda com 'Essa pergunta não esta relacionada ao jogo'
+  - Considere a data atual ${new Date().toLocaleDateString()}
+  - Faça pesquisas atualizadas sobre o patch atual , baseado na data atual, para dar uma resposta coerente.
+  - Nunca responda itens que você não tenha certeza de que existe no patch atual.
+
+  ## Resposta
+    - Economize na resposta, seja direto e responda no máximo 500 caracteres.
+    - Responda em markdown.
+    - Responda tudo em  listas.
+    - Não precisa fazer nenhuma saudação ou despedida, apenas responda oque o usuário esta querendo
+  ## Exemplo de resposta
+  pergunta do usuário: Melhor build rengar jungle
+  Resposta: A build mais atual é: \n\n **Itens:**\n\n coloque os itens aqui. \n\n** Runas:**\n\n exemplo de runas\n\n
+
+  ---
+
+  Aqui esta a pergunta do usuário: ${question}`;
+
+  const requestBody = {
     contents: [
       {
         parts: [
           {
-            text: pergunta,
+            text: prompt,
           },
         ],
       },
@@ -35,7 +60,7 @@ const perguntarAI = async (question, game, apiKey) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(contents),
+    body: JSON.stringify(requestBody),
   });
 
   const data = await response.json();
@@ -70,6 +95,7 @@ const enviarFormulario = async (event) => {
     const text = await perguntarAI(question, game, apiKey);
     aiResponse.querySelector(".response-content").innerHTML =
       markDownToHTML(text);
+    aiResponse.classList.remove("hidden");
   } catch (error) {
     console.error("Erro:", error);
     aiResponse.querySelector(
