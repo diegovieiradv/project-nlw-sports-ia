@@ -10,6 +10,16 @@ O projeto foi desenvolvido com foco em uma experiência consistente em todos os 
 - 📱 **Tablet**: Design adaptativo mantendo a usabilidade
 - 📱 **Mobile**: Interface simplificada e amigável para telas pequenas
 
+## 🎨 Preview do Projeto
+
+<div align="center">
+
+![Mockup dos Dispositivos](./assets/mockup-devices.png)
+
+_O projeto se adapta perfeitamente a diferentes tamanhos de tela_
+
+</div>
+
 ## 🛠️ Tecnologias
 
 - HTML5
@@ -23,29 +33,6 @@ O projeto foi desenvolvido com foco em uma experiência consistente em todos os 
 - 💡 Dicas de builds e estratégias atualizadas
 - 📱 Design responsivo para todos os dispositivos
 - ⚡ Integração com IA avançada
-
-## 🎨 Preview
-
-O projeto se adapta perfeitamente a diferentes tamanhos de tela:
-
-```mermaid
-graph TD
-    subgraph Desktop["💻 Desktop View"]
-        D["+-----------------+<br/>|    E-SPORTS     |<br/>|     <nlw/>      |<br/>|  +-----------+  |<br/>|  | API KEY    |  |<br/>|  +-----------+  |<br/>|  | Game Select |  |<br/>|  +-----------+  |<br/>|  | Question    |  |<br/>|  +-----------+  |<br/>|  [  PERGUNTAR  ]  |<br/>+-----------------+"]
-    end
-
-    subgraph Tablet["📱 Tablet View"]
-        T["+--------------+<br/>|   E-SPORTS    |<br/>|    <nlw/>     |<br/>|  +--------+   |<br/>|  |API KEY |   |<br/>|  +--------+   |<br/>|  |Select  |   |<br/>|  +--------+   |<br/>|  |Question|   |<br/>|  +--------+   |<br/>|  [PERGUNTAR]   |<br/>+--------------+"]
-    end
-
-    subgraph Mobile["📱 Mobile View"]
-        M["+---------+<br/>| E-SPORTS |<br/>|  <nlw/>  |<br/>| +-----+ |<br/>| |API  | |<br/>| +-----+ |<br/>| |Game | |<br/>| +-----+ |<br/>| |Quest| |<br/>| +-----+ |<br/>| [ASK]   |<br/>+---------+"]
-    end
-
-    style Desktop fill:#2a2634,stroke:#9572fc,stroke-width:2px
-    style Tablet fill:#2a2634,stroke:#43e7ad,stroke-width:2px
-    style Mobile fill:#2a2634,stroke:#e2d45c,stroke-width:2px
-```
 
 ## 🚀 Como usar
 
