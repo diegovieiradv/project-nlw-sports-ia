@@ -34,6 +34,7 @@ const perguntarAI = async (question, game, apiKey) => {
     - Economize na resposta, seja direto e responda no máximo 500 caracteres.
     - Responda em markdown.
     - Responda tudo em  listas.
+    - Builds detalhadas.
     - Não precisa fazer nenhuma saudação ou despedida, apenas responda oque o usuário esta querendo
   ## Exemplo de resposta
   pergunta do usuário: Melhor build rengar jungle
