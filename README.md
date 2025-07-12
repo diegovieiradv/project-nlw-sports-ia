@@ -2,6 +2,16 @@
 
 Um assistente inteligente para jogadores que fornece informações sobre estratégias, builds e dicas para diversos jogos, alimentado pela API do Google Gemini.
 
+## 🎨 Preview do Projeto
+
+<div align="center">
+
+![Mockup dos Dispositivos](./assets/mockup-devices.png)
+
+_Interface moderna e responsiva em todos os dispositivos_
+
+</div>
+
 ## 📱 Layout Responsivo
 
 O projeto foi desenvolvido com foco em uma experiência consistente em todos os dispositivos:
@@ -28,43 +38,6 @@ O projeto foi desenvolvido com foco em uma experiência consistente em todos os 
 - Otimização para toque e interação móvel
 - Foco em performance e carregamento rápido
 - Adaptação para diferentes orientações (retrato/paisagem)
-
-## 🎨 Preview do Projeto
-
-<div align="center">
-
-![Mockup dos Dispositivos](./assets/mockup-devices.png)
-
-_O projeto se adapta perfeitamente a diferentes tamanhos de tela_
-
-</div>
-
-### 📊 Diagrama de Responsividade
-
-```mermaid
-graph TD
-    subgraph Desktop["💻 Desktop"]
-        D1["Tela Completa<br/>1920x1080"]
-        D2["Interface Otimizada<br/>para Respostas"]
-    end
-
-    subgraph Tablet["📱 Tablet"]
-        T1["Design Adaptativo<br/>768x1024"]
-        T2["Layout Flexível"]
-    end
-
-    subgraph Mobile["📱 Mobile"]
-        M1["Interface Compacta<br/>375x667"]
-        M2["Navegação Simplificada"]
-    end
-
-    Desktop --> |"Responsividade"| Tablet
-    Tablet --> |"Adaptação"| Mobile
-
-    style Desktop fill:#9572fc,stroke:#fff,stroke-width:2px
-    style Tablet fill:#43e7ad,stroke:#fff,stroke-width:2px
-    style Mobile fill:#e2d45c,stroke:#fff,stroke-width:2px
-```
 
 ### 🎯 Características Responsivas
 
