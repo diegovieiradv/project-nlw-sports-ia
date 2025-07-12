@@ -5,8 +5,6 @@ const askButton = document.getElementById("askButton");
 const form = document.getElementById("form");
 const aiResponse = document.getElementById("aiResponse");
 
-
-
 const markDownToHTML = (text) => {
   const converter = new showdown.Converter();
   return converter.makeHtml(text);
