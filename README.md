@@ -6,7 +6,7 @@ Um assistente inteligente para jogadores que fornece informações sobre estrat�
 
 <div align="center">
 
-![Mockup dos Dispositivos](./assets/mockup.png)
+![Mockup dos Dispositivos](./assets/mockup-.png)
 
 _Interface moderna e responsiva em todos os dispositivos_
 
